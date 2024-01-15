@@ -2,4 +2,4 @@
 ## Contributors
 * Richard Krasso
 * Meher Salim
-Bellevue Univerity Web Development - WEB 231
+... Bellevue Univerity Web Development - WEB 231
