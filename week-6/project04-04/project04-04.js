@@ -12,9 +12,9 @@
 */
 
 // Global variables
-let cashBox = document.getElementById('cash');
-let billBox = document.getElementById('bill');
-let changeBox = document.getElementById('change');
+let cashBox = document.getElementById('cash'); //add '' around cash
+let billBox = document.getElementById('bill'); // add '' around bill
+let changeBox = document.getElementById('change'); // add '' around change
 
 // Event handlers to be run when the cash or bill value changes
 //change 'runRegister' to 'runTheRegister'
@@ -40,11 +40,13 @@ function runTheRegister() {
    zeroTheRegister();
    
    let changeValue = cashBox.value - billBox.value;  // calculate the change 
-   
+
+   //add try catch statement to counter user error
    try{
       if(changeValue < 0){
          throw "Cash amount doesn't cover the bill";
       }
+      //move changeBox.value and calcChange inside of try catch statment
       changeBox.value = formatCurrency(changeValue); // format the change as currency
       calcChange(changeValue); // Determine the units of currency needed for the change
    }
